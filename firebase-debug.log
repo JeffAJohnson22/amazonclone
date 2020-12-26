@@ -1,0 +1,43 @@
+[debug] [2020-12-26T04:47:20.067Z] ----------------------------------------------------------------------
+[debug] [2020-12-26T04:47:20.069Z] Command:       /usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js /Users/jeffreyjohnson/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init
+[debug] [2020-12-26T04:47:20.069Z] CLI Version:   9.1.0
+[debug] [2020-12-26T04:47:20.069Z] Platform:      darwin
+[debug] [2020-12-26T04:47:20.069Z] Node Version:  v12.18.1
+[debug] [2020-12-26T04:47:20.074Z] Time:          Fri Dec 25 2020 23:47:20 GMT-0500 (Eastern Standard Time)
+[debug] [2020-12-26T04:47:20.074Z] ----------------------------------------------------------------------
+[debug] [2020-12-26T04:47:20.074Z] 
+[debug] [2020-12-26T04:47:20.080Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-26T04:47:20.080Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/jeffreyjohnson/Desktop/amazonclone
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using clone-e10bb. 
+[debug] [2020-12-26T04:47:23.185Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/clone-e10bb  
+ 
+[debug] [2020-12-26T04:47:23.483Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 26 Dec 2020 04:47:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
