@@ -6,7 +6,7 @@ import EditLocationIcon from "@material-ui/icons/EditLocation";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../context/StateProvider";
-import { authenticate } from "../../firebase";
+import { authenticate } from "../../helpers/firebase";
 
 const Header = () => {
   const [{ basket, user }] = useStateValue();
@@ -45,12 +45,12 @@ const Header = () => {
             </span>
           </div>
         </Link>
-
+        <Link to={"/orders"}>
         <div className="header__option">
           <span className="header__optionlineOne">Returns</span>
           <span className="header__optionlineTwo">& Orders</span>
         </div>
-
+        </Link>
         <div className="header__option">
           <span className="header__optionlineOne">Your</span>
           <span className="header__optionlineTwo">Prime</span>

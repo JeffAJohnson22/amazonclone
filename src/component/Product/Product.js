@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from 'react';
 import "./Product.css";
 import { useStateValue } from "../../context/StateProvider";
+import Popup from '../Popup/Popup';
 
 const Product = ({ product: { id, img, title, price, rating } }) => {
+
   const [{ basket }, dispatch] = useStateValue();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
+ 
 
   const addToBasket = () => {
+    // togglePopup()
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
@@ -16,6 +25,8 @@ const Product = ({ product: { id, img, title, price, rating } }) => {
         rating: rating,
       },
     });
+
+    <div>apple</div>
   };
   return (
     <div className="product">
@@ -31,6 +42,14 @@ const Product = ({ product: { id, img, title, price, rating } }) => {
       </div>
       <img src={img} alt={title} />
       <button onClick={addToBasket}>add to basket</button>
+      {isOpen && <Popup
+      content={<>
+        <b>Design your Popup</b>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut </p>
+        <button>Test button</button>
+      </>}
+      handleClose={togglePopup}
+    />}
     </div>
   );
 };

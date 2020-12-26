@@ -1,13 +1,16 @@
+
 export const firstRow = [
+ 
+ 
   {
-    id: "12345",
+    id: 1234,
     price: 1000.68,
     title: "Blues Eyes White Dragon",
     img: "https://i.ebayimg.com/images/g/fQEAAOSwXS5fYtou/s-l1600.jpg",
     rating: 8,
   },
   {
-    id: "453",
+    id: 1234  ,
     price: 800.75,
     title: "Charizard",
     img: "https://i.ebayimg.com/images/g/R9QAAOSwwLNfkTcD/s-l640.jpg",
@@ -17,7 +20,7 @@ export const firstRow = [
 
 export const secondRow = [
   {
-    id: "12356745",
+    id: 1234,
     price: 600.21,
     title: "PlayStation 5",
     img:
@@ -25,7 +28,7 @@ export const secondRow = [
     rating: 6,
   },
   {
-    id: "4325",
+    id: 1234,
     price: 650.68,
     title: "Microsoft Xbox Series X (US Plug) RRT-00001/RRT-00010 Black",
     img:
@@ -33,7 +36,7 @@ export const secondRow = [
     rating: 3,
   },
   {
-    id: "3468",
+    id: 1234,
     price: 300.68,
     img:
       "https://images-na.ssl-images-amazon.com/images/I/61JnrafZ7zL._AC_SL1457_.jpg",
@@ -44,7 +47,7 @@ export const secondRow = [
 
 export const lastRow = [
   {
-    id: "78956",
+    id: 1234,
     price: 750.74,
     title: "Apple iPhone 12 mini",
     img:

@@ -3,7 +3,7 @@ import "./Checkout.css";
 import Subtotal from "../Subtotal/Subtotal";
 import { useStateValue } from "../../context/StateProvider";
 import BasketItems from "./BasketItems/BasketItems";
-import FlipMove from 'react-flip-move';
+
 const banner =
   "https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg";
 
@@ -17,12 +17,10 @@ const Checkout = () => {
         <div>
         <h3>Hello {user ? user.email : 'User'}</h3>
           <h2 className="checkout__title">Your Shopping Basket</h2>
-          <FlipMove>
+     
           {basket.map((items) => (
             <BasketItems key={items.id} items={items} />
           ))}
-          </FlipMove>
-
 
         </div>
       </div>

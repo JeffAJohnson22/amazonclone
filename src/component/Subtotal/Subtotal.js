@@ -1,8 +1,11 @@
 import React from "react";
 import CurrencyFormat from 'react-currency-format';
 import "./Subtotal.css";
+import { Link, useHistory } from "react-router-dom";
 
 const Subtotal = ({ items }) => {
+  const history = useHistory();
+
   let value = items.map(({ price }) => {
     return price;
   });
@@ -14,7 +17,7 @@ const Subtotal = ({ items }) => {
   return (
     <div className="subtotal">
       <CurrencyFormat
-        renderText={() => (
+        renderText={(newValue) => (
           <>
             <p>
               Subtotal ({items.length} items) :
@@ -33,7 +36,7 @@ const Subtotal = ({ items }) => {
         prefix={"$"}
       />
 
-      <button>Proceed to Checkout</button>
+      <button onClick={e => history.push('/payment')}>Proceed to Checkout</button>
     </div>
   );
 };

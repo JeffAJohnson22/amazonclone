@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./Login.css";
-import { authenticate } from "../../firebase";
+import { authenticate } from "../../helpers/firebase";
 const amazonLogo =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png";
 
