@@ -15,7 +15,6 @@ const Basket = ({ items: { id, img, title, price, rating } }) => {
   return (
     <div className="basket">
       <img className="basket__image" src={img} alt={title} />
-
       <div className="basket__info">
         <p className="basket__title">{title}</p>
         <p className="basket__price">

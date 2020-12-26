@@ -1,13 +1,13 @@
 import React from "react";
-import CurrencyFormat from "react-currency-format";
+import CurrencyFormat from 'react-currency-format';
 import "./Subtotal.css";
 
 const Subtotal = ({ items }) => {
-  let value = items?.map(({ price }) => {
+  let value = items.map(({ price }) => {
     return price;
   });
 
-  let newValue = value?.reduce((acc, cv) => {
+  let newValue = value.reduce((acc, cv) => {
     return acc + cv;
   }, 0);
 
@@ -17,7 +17,7 @@ const Subtotal = ({ items }) => {
         renderText={() => (
           <>
             <p>
-              Subtotal ({items?.length} items) :
+              Subtotal ({items.length} items) :
               <strong>${`${newValue}`} </strong>
             </p>
             <small className="subtotal__gift">
