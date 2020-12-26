@@ -13,7 +13,7 @@ const Login = () => {
   const signUp = (e) => {
     e.preventDefault();
     authenticate
-      .createUserWithEmailAndPassword(email, password)
+      .createUserWithEmailAsindPassword(email, password)
       .then((auth) => {
         if (auth) {
           history.push("/");
@@ -25,7 +25,7 @@ const Login = () => {
   const signIn = (e) => {
     e.preventDefault();
     authenticate
-    .createUserWithEmailAndPassword(email, password)
+    .signInWithEmailAndPassword(email, password)
     .then((auth) => {
       console.log(auth, 'auth')
       if (auth) {

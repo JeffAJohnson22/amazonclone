@@ -15,7 +15,7 @@ import { Elements } from "@stripe/react-stripe-js";
 const promise = loadStripe("pk_test_ju0iMKKhjVefJJFJUcbKbgWP00Rb7RDyp8");
 
 const App = () => {
-  const [ {}, dispatch] = useStateValue();
+  const [ {} ,  dispatch] = useStateValue();
 
   useEffect(() => {
     authenticate.onAuthStateChanged((authUser) => {

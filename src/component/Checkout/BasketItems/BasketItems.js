@@ -2,7 +2,7 @@ import React from "react";
 import { useStateValue } from "../../../context/StateProvider";
 import "./BasketItems.css";
 
-const Basket = ({ items: { id, img, title, price, rating } }) => {
+const Basket = ({ items: { id, img, title, price, rating }, created }) => {
   const [{ basket }, dispatch] = useStateValue();
 
   const removeFromBasket = () => {
@@ -14,7 +14,9 @@ const Basket = ({ items: { id, img, title, price, rating } }) => {
 
   return (
     <div className="basket hover14">
-      <figure><img className="basket__image" src={img} alt={title} /></figure>
+      <figure>
+        <img className="basket__image" src={img} alt={title} />
+      </figure>
       <div className="basket__info">
         <p className="basket__title">{title}</p>
         <p className="basket__price">
@@ -24,9 +26,11 @@ const Basket = ({ items: { id, img, title, price, rating } }) => {
         <div className="basket__rating">
           <p>{"⭐".repeat(rating)}</p>
         </div>
-        <button onClick={removeFromBasket}>
-          <strong>remove from basket</strong>
-        </button>
+        {!created && (
+          <button onClick={removeFromBasket}>
+            <strong>remove from basket</strong>
+          </button>
+        )}
       </div>
     </div>
   );

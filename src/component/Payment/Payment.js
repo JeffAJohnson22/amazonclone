@@ -5,11 +5,12 @@ import { Link, useHistory } from "react-router-dom";
 import "./Payment.css";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
-import { instance } from '../../helpers/axios'
+import { instance } from "../../helpers/axios";
+import { db } from "../../helpers/firebase";
 
 const Payment = () => {
   const [{ basket, user }, dispatch] = useStateValue();
-  const history = useHistory()
+  const history = useHistory();
   const [error, setError] = useState(null);
   const [succeeded, setSucceeded] = useState(null);
   const [processing, setProcessing] = useState(null);
@@ -27,11 +28,10 @@ const Payment = () => {
   }, 0);
 
   const func = (v) => {
-    let need = String(v).replace(/[$,]/gi,'')
-    let other =(need * 100).toFixed(0)
-    return Number(other)
-    }
-
+    let need = String(v).replace(/[$,]/gi, "");
+    let other = (need * 100).toFixed(0);
+    return Number(other);
+  };
 
   useEffect(() => {
     const getClientSecret = async () => {
@@ -44,24 +44,37 @@ const Payment = () => {
     getClientSecret();
   }, [basket, newValue]);
 
-  console.log('the secret is' , clientSecret)
+  console.log("the secret is", clientSecret);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setProcessing(true);
-    const payload = await stripe.confirmCardPayment(clientSecret, {
-      payment_method: { card: elements.getElement(CardElement) },
-    }).then(({paymentIntent}) => {
-      setSucceeded(true)
-      setError(null)
-      setProcessing(false)
-
-      dispatch({
-        type: 'CLEAR_BASKET'
+    const payload = await stripe
+      .confirmCardPayment(clientSecret, {
+        payment_method: { card: elements.getElement(CardElement) },
       })
+      .then(({ paymentIntent }) => {
+        console.log(user, "user");
+        db.collection("users")
+          .doc(user?.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            basket: basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
 
-      history.replace('/orders')
-    });
+        setSucceeded(true);
+        setError(null);
+        setProcessing(false);
+
+        dispatch({
+          type: "CLEAR_BASKET",
+        });
+
+        history.replace("/orders");
+      });
   };
 
   const handleChange = (e) => {
