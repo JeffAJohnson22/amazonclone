@@ -21,7 +21,7 @@ const Subtotal = ({ items }) => {
           <>
             <p>
               Subtotal ({items.length} items) :
-              <strong>{`${newValue}`} </strong>
+              <strong>{newValue} </strong>
             </p>
             <small className="subtotal__gift">
               <input type="checkbox" />

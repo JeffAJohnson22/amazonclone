@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.67b1951f.chunk.css",
-    "main.js": "/static/js/main.5d76c872.chunk.js",
-    "main.js.map": "/static/js/main.5d76c872.chunk.js.map",
+    "main.css": "/static/css/main.9be5217b.chunk.css",
+    "main.js": "/static/js/main.17e7937a.chunk.js",
+    "main.js.map": "/static/js/main.17e7937a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0770338e.js",
     "runtime-main.js.map": "/static/js/runtime-main.0770338e.js.map",
-    "static/js/2.093bff06.chunk.js": "/static/js/2.093bff06.chunk.js",
-    "static/js/2.093bff06.chunk.js.map": "/static/js/2.093bff06.chunk.js.map",
+    "static/js/2.a9b4d52d.chunk.js": "/static/js/2.a9b4d52d.chunk.js",
+    "static/js/2.a9b4d52d.chunk.js.map": "/static/js/2.a9b4d52d.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.67b1951f.chunk.css.map": "/static/css/main.67b1951f.chunk.css.map",
-    "static/js/2.093bff06.chunk.js.LICENSE.txt": "/static/js/2.093bff06.chunk.js.LICENSE.txt",
+    "static/css/main.9be5217b.chunk.css.map": "/static/css/main.9be5217b.chunk.css.map",
+    "static/js/2.a9b4d52d.chunk.js.LICENSE.txt": "/static/js/2.a9b4d52d.chunk.js.LICENSE.txt",
     "static/media/amazon_logo.57ffa2fe.png": "/static/media/amazon_logo.57ffa2fe.png"
   },
   "entrypoints": [
     "static/js/runtime-main.0770338e.js",
-    "static/js/2.093bff06.chunk.js",
-    "static/css/main.67b1951f.chunk.css",
-    "static/js/main.5d76c872.chunk.js"
+    "static/js/2.a9b4d52d.chunk.js",
+    "static/css/main.9be5217b.chunk.css",
+    "static/js/main.17e7937a.chunk.js"
   ]
 }
